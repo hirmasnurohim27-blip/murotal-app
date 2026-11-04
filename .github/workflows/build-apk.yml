@@ -18,10 +18,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.7
-          build-root-directory: ./android
+          build-root-directory: android   # <--- Ubah jadi 'android'
 
       - name: Build debug APK
-        working-directory: ./android
+        working-directory: android      # <--- Ubah jadi 'android'
         run: ./gradlew assembleDebug --no-daemon
 
       - uses: actions/upload-artifact@v4
